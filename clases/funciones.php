@@ -4,7 +4,7 @@ class funciones{
 
     public function __construct(){
         // Constructor: Establece la conexión a la base de datos
-        $this->conexion = new mysqli("localhost", "root", "", "TorneosFut");
+        $this->conexion = new mysqli("localhost", "rafa", "admin ", "TorneosFut");
         if ($this->conexion->connect_error) {
             die("Error de conexión: " . $this->conexion->connect_error);
         }
