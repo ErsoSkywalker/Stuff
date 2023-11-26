@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/posicionesequipos.css">
+    <title>Consulta de Posiciones</title>
+</head>
+<body>
+    <header>
+        <header>
+            <a href="../index.php"><h1><img src="../images/logo.png" width=60px height=60px>LA BOMBONERA<img src="../images/logo.png" width=60px height=60px></h1></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="equipos.html">Gestión de Equipos</a>
+                        <ul>
+                            <li class="escondido"><a href="registrarequipos.html">Alta</a></li>
+                            <li class="escondido"><a href="eliminarequipos.html">Baja</a></li>
+                            <li class="escondido"><a href="modificarequipos.html">Modificación</a></li>
+                            <li><a href="consultarequipos.html">Consulta</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="jugadores.html">Gestión de Jugadores</a>
+                        <ul>
+                            <li class="escondido"><a href="registrarjugadores.html">Alta</a></li>
+                            <li class="escondido"><a href="eliminarjugadores.html">Baja</a></li>
+                            <li class="escondido"><a href="modificarjugadores.html">Modificación</a></li>
+                            <li><a href="consultarjugadores.html">Consulta</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="torneos.html">Gestión de Torneos</a>
+                        <ul>
+                            <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
+                            <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
+                            <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
+                            <li><a href="consultartorneo.html">Consulta</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="finanzas.html">Gestión de Información Financiera</a>
+                        <ul>
+                            <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
+                            <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="trabajador.html">Gestión de Trabajadores</a>
+                        <ul>
+                            <li class="escondido"><a href="registrartrabajador.html">Alta</a></li>
+                            <li class="escondido"><a href="eliminartrabajador.html">Baja</a></li>
+                            <li class="escondido"><a href="modificartrabajador.html">Modificación</a></li>
+                            <li><a href="consultartrabajador.html">Consulta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <aside>
+            <center><img src="../images/logo.png" width=100% height=200px></center>
+            <div class="sidebar-mensaje">
+                <p>El equipo 1 tiene un adeudo</p>
+    <hr>
+            </div>
+            <div class="sidebar-mensaje">
+                <p>Otro mensaje importante</p>
+            </div>
+        </aside>
+    </header>
+    <div class="busqueda">
+        <label for="buscar-partido">Buscar Partido:</label>
+        <input type="text" id="buscar-partido" name="buscar-partido">
+        <button type="button" id="btn-buscar">Buscar</button>
+    </div>
+    <main>
+        <table class="tabla-posiciones">
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>PT</th>
+                    <th>JG</th>
+                    <th>JE</th>
+                    <th>JP</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>F</th>
+                    <th>DIF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Equipo A</td>
+                    <td>24</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>10</td>
+                </tr>
+                <!-- Agrega más filas con datos de equipos aquí -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <!-- Contenido del footer aquí -->
+    </footer>
+</body>
+</html>

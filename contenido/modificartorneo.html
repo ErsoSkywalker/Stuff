@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Equipos</title>
+    <link rel="stylesheet" href="../css/modificartorneo.css">
+    <script type="text/javascript" src="../scripts/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="../scripts/sessiond.js"></script>
+
+    <script type="text/javascript" src="../scripts/jqx-all.js"></script>    
+    <script type="text/javascript" src="../scripts/modificartorneo.js"></script>
+</head>
+<header>
+    <a href="../index.php"><h1><img src="../images/logo.png" width=60px height=60px>LA BOMBONERA<img src="../images/logo.png" width=60px height=60px></h1></a>
+    <nav>
+        <ul>
+            <li>
+                <a href="equipos.html">Gestión de Equipos</a>
+                <ul>
+                    <li class="escondido"><a href="registrarequipos.html">Alta</a></li>
+                    <li class="escondido"><a href="eliminarequipos.html">Baja</a></li>
+                    <li class="escondido"><a href="modificarequipos.html">Modificación</a></li>
+                    <li><a href="consultarequipos.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="jugadores.html">Gestión de Jugadores</a>
+                <ul>
+                    <li class="escondido"><a href="registrarjugadores.html">Alta</a></li>
+                    <li class="escondido"><a href="eliminarjugadores.html">Baja</a></li>
+                    <li class="escondido"><a href="modificarjugadores.html">Modificación</a></li>
+                    <li><a href="consultarjugadores.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="torneos.html">Gestión de Torneos</a>
+                <ul>
+                    <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
+                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
+                    <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
+                    <li><a href="consultartorneo.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="finanzas.html">Gestión de Información Financiera</a>
+                <ul>
+                    <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
+                    <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="trabajador.html">Gestión de Trabajadores</a>
+                <ul>
+                    <li class="escondido"><a href="registrartrabajador.html">Alta</a></li>
+                    <li class="escondido"><a href="eliminartrabajador.html">Baja</a></li>
+                    <li class="escondido"><a href="modificartrabajador.html">Modificación</a></li>
+                    <li><a href="consultartrabajador.html">Consulta</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>   
+ <aside>
+        <center><img src="../images/logo.png" width=100% height=200px></center>
+        <div class="sidebar-mensaje">
+            <p>El equipo 1 tiene un adeudo</p>
+<hr>
+        </div>
+        <div class="sidebar-mensaje">
+            <p>Otro mensaje importante</p>
+        </div>
+    </aside>
+    
+
+    <main>
+        <form class="formulario">
+            <h2>Buscar Torneo</h2>
+            <label for="nombreEquipo">Nombre del Torneo</label>
+            <div id="torneoc"></div>
+            <button type="button" class="boton-amarillo" id="Buscar">Buscar</button>  
+        </form>
+
+        <form class="formulario">
+            <h2>Información del Equipo</h2>
+            <input type="text" id="torneo_id" name="torneo_id" required hidden>
+            <label for="nombreEquipo">Nombre del Equipo:</label>
+            <input type="text" id="nombreEquipo" name="nombreEquipo">
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="fechaInicio" name="fechaInicio" required>
+
+            <label for="fechaFin">Fecha de Fin:</label>
+            <input type="date" id="fechaFin" name="fechaFin" required>
+
+
+            <button type="button" class="boton-amarillo" id="modificarEquipo">Modificar</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2023 La Bombonera Fut 7 - Todos los derechos reservados</p>
+</footer>
+</html>

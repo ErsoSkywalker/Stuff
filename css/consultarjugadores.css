@@ -1,0 +1,125 @@
+body {
+align-items: center;
+    font-family: 'Verdana';
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex; /* Establece un contenedor flex para organizar el contenido */
+    flex-direction: column; /* Alinea los elementos verticalmente */	
+    width:78.5%;
+}
+
+header {
+    background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 70px;
+    margin: 0;
+background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+}
+
+header img {
+    margin: 10px;
+}
+h1 {
+    font-size: 70px;
+    margin: 0;
+background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+}
+
+nav ul {
+    background-color: #0074e4;
+    color: #fff;
+    list-style: none;
+    padding: 0;
+    display: flex; /* Cambio a flexbox para alinear el menú */
+    padding: 10px 0;
+    justify-content: space-between; /* Distribuye los elementos en el espacio disponible */
+    position: relative; /* Añade posición relativa */
+    z-index: 2; /* Añade un índice z para estar encima del sidebar */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: ;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0074e4;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 200px;
+}
+aside {
+
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    width: 250px;
+    height: 100% ; 
+    color: rgb(225, 49, 49);
+    right:0;
+    z-index: -1;
+ position: fixed;
+}
+
+.sidebar-mensaje {
+    margin-top: 10px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.tabla-jugadores {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tabla-jugadores th,
+.tabla-jugadores td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color:yellow;
+
+}
+
+.tabla-jugadores th {
+    background-color: #0074e4;
+    color: #fff;
+}
+
+footer {
+    /* Estilos para el footer aquí */
+}

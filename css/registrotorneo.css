@@ -1,0 +1,205 @@
+body {
+align-items: center;
+    font-family: 'Verdana';
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;	
+    width:78.5%;
+}
+
+header {
+    background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 70px;
+    margin: 0;
+background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+}
+
+header img {
+    margin: 10px;
+}
+h1 {
+    font-size: 70px;
+    margin: 0;
+background-color: #0074e4;
+    font-family: 'Comic Sans MS';
+}
+
+nav ul {
+    background-color: #0074e4;
+    color: #fff;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: ;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0074e4;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 200px;
+}
+aside {
+
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    width: 250px;
+    height: 100% ; 
+    color: rgb(225, 49, 49);
+    right:0;
+    z-index: -1;
+ position: fixed;
+}
+
+.sidebar-mensaje {
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 400px;
+    background-color: #0074e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    width: 400;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button[type="button"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.inputequipos{
+    width: 75%;
+    height: 40px;
+    margin: 0rem 0.5rem 4rem 0rem;
+    left: 24%;
+    position: relative;
+}
+.inputequipos[fila="1"]{
+
+    margin: 2% 0% 2% 45%;
+}
+.inputequipos[fila="2"]{
+    margin: 2% 0% 2% 27%;
+    position: relative;
+    left: -12%;
+}
+.inputequipos[fila="4"]{
+    margin: 2% 0% 2% 3%;
+    left: -1%;
+    position: relative;
+}
+.inputequipos[fila="8"]{
+    width: 75% !important;
+    margin: 2% 0% 0% .5%;
+    left: 3%;
+    position: relative;
+}
+#tablastorneo{
+    min-width: 100%;
+    width: 920px;
+}
+#botones{
+    margin: 0 auto;
+    width: 20%;
+}
+.botones{
+    margin-left: 7px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.campos{
+grid-row: 1;
+}
+.comboequipos{
+    grid-row: 2;
+    margin: 0 auto;
+    width: 90%;
+}
+#equipo{
+    display: grid;
+}
+#equiposc{
+    width: 100% !important;
+}
