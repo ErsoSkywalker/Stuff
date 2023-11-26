@@ -46,7 +46,7 @@
                 <ul>
                     <li class="escondido"><a href="contenido/registrartrabajador.html">Alta</a></li>
                     <li class="escondido"><a href="contenido/eliminartrabajador.html">Baja</a></li>
-                    <li class="escondido"><a href="contenido/modificartrabajador.html">Modificación</a></li>
+                    <li class="escondido"><a href="contenido/modificartrabajador.html">Modificación.</a></li>
                     <li><a href="contenido/consultartrabajador.html">Consulta</a></li>
                 </ul>
             </li>
