@@ -16,7 +16,7 @@ $(document).ready(function () {
                 method: "POST",
                 data: { accion:"eliminarjugador",nombre: id},
                 success: function (response) {
-                    alert(response);
+                    
                 },
                 error: function () {
                     // Manejo de errores

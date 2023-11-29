@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             method: "POST",
             data: { accion:"agregarjugador",nombre: nombre,posicion:posicion,edad:edad,telefonos:telefonos,correo:correo,equipo:equipo},
             success: function (response) {
-                alert(response);
+                
             },
             error: function () {
                 // Manejo de errores

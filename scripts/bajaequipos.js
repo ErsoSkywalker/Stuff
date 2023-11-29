@@ -15,7 +15,7 @@ $(document).ready(function () {
                 method: "POST",
                 data: { accion:"eliminar",nombre: nombreEquipo},
                 success: function (response) {
-                    alert(response);
+                    
                     location.reload();
                 },
                 error: function () {

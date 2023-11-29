@@ -134,6 +134,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             case "consultaradeudos":
                 $resultado = $miClase->consultaradeudos();
                 break;
+            case "consultarmensajes":
+                $resultado = $miClase->consultarmensajes();
+                break;
             case "consultartorneoespecifico":
                 $nombre = $_POST["id"];
                 $resultado = $miClase->consultarespecificotorneo($nombre);
@@ -143,6 +146,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $contraseña = $_POST["contraseña"];
                 $resultado = $miClase->iniciarsession($usuario,$contraseña);
                 break;
+                case "consultartablasderesultado":
+                    $nombre = $_POST["id"];
+                    $resultado = $miClase->consultartablasderesultado($nombre);
+                    break;
             case "consultarsession":
                 $resultado = $miClase->consultarsession();
                 break;

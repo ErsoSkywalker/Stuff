@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <script type="text/javascript" src="scripts/jquery-3.7.1.js"></script>
     <script type="text/javascript" src="scripts/session.js"></script>
+    <script type="text/javascript" src="scripts/slick.min.js"></script>
     <title>La Bombonera</title>
 </head>
     <header>
@@ -39,7 +42,7 @@
             <li><a href="contenido/finanzas.html">Gestión de Información Financiera</a>
                 <ul>
                     <li><a href="contenido/consultaradeudo.html">Consulta de Adeudos</a></li>
-                    <li><a href="contenido/modificaradeudo">Modificación de Adeudos</a></li>
+                    <li><a href="contenido/modificaradeudo.html">Modificación de Adeudos</a></li>
                 </ul>
             </li>
             <li><a href="contenido/trabajador.html">Gestión de Trabajadores</a>
@@ -74,12 +77,10 @@
         </div>
         <center><img src="images/logo.png" width=100% height=200px></center>
         <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
+            <div id="mensajes"></div>
 <hr>
         </div>
-        <div class="sidebar-mensaje">
-            <p>Otro mensaje importante</p>
-        </div>
+        
     </aside>
     <footer>
         <p>Contacto 2227098819</p>

@@ -115,7 +115,7 @@ $(document).on('click', '#finalizarBtn', function(event) {
         method: "POST",
         data: { accion:"agregartorneo",equipos: equipos,fecini:fecini,fecter:fecter,nombre:nombre,cuantos:cuantos},
         success: function (response) {
-            alert(response);
+            
         },
         error: function () {
             // Manejo de errores

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             method: "POST",
             data: { accion:"agregartrabajador",nombre:nombre,telefono:telefono,correo:correo,puesto:puesto},
             success: function (response) {
-                alert(response);
+                
             },
             error: function () {
                 // Manejo de errores

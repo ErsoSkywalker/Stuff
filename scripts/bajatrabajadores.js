@@ -16,7 +16,7 @@ $(document).ready(function () {
                 method: "POST",
                 data: { accion:"eliminartrabajador",id: idtrabajador},
                 success: function (response) {
-                    alert(response);
+                    
                     location.reload();
                 },
                 error: function () {

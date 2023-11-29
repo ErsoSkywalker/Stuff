@@ -88,7 +88,7 @@ $(document).ready(function () {
                 method: "POST",
                 data: { accion:"agregarinfopartido",idpartido: idpartido,nombrepartido:nombrepartido,goleseq1:goleseq1,goleseq2:goleseq2,faltaseq1:faltaseq1,faltaseq2:faltaseq2,ganador:ganador},
                 success: function (response) {
-                    alert(response);
+                    
                 },
                 error: function () {
                     // Manejo de errores

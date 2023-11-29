@@ -4,7 +4,7 @@ class funciones{
 
     public function __construct(){
         // Constructor: Establece la conexión a la base de datos
-        $this->conexion = new mysqli("localhost", "rafa", "admin ", "TorneosFut");
+        $this->conexion = new mysqli("localhost", "root", "", "TorneosFut");
         if ($this->conexion->connect_error) {
             die("Error de conexión: " . $this->conexion->connect_error);
         }
@@ -61,6 +61,22 @@ class funciones{
     }
     public function consultarjugador(){
         $query = "SELECT jugador_id,NombreJugador,Posicion,Edad,Telefono_de_contacto,correo,equipo FROM jugadores;";
+
+        $resultado = $this->conexion->query($query);
+
+        if (!$resultado) {
+            die("Error en la consulta: " . $this->conexion->error);
+        }
+        $datos = array();
+        while ($fila = $resultado->fetch_assoc()) {
+            $datos[] = $fila;
+        }
+        $this->conexion->close();
+        header('Content-Type: application/json');
+        return $datos;
+    }
+    public function consultarmensajes(){
+        $query = "select concat('El equipo ',Nombre_equipo,' tiene un adeudo') as mensaje from equipo where Adeudos >0;";
 
         $resultado = $this->conexion->query($query);
 
@@ -315,6 +331,45 @@ class funciones{
     }
     public function consultartorneo(){
         $query = "select * from torneo";
+
+        $resultado = $this->conexion->query($query);
+
+        if (!$resultado) {
+            die("Error en la consulta: " . $this->conexion->error);
+        }
+        $datos = array();
+        while ($fila = $resultado->fetch_assoc()) {
+            $datos[] = $fila;
+        }
+        $this->conexion->close();
+        header('Content-Type: application/json');
+        return $datos;
+    }
+    public function consultartablasderesultado($id_torneo){
+        $query = "SELECT 
+        NombreEquipo,
+        (SUM(ganado) * 3 + SUM(empate)) AS PTS,
+        COUNT(*) AS J,
+        SUM(ganado) AS JG,
+        SUM(empate) AS JE,
+        SUM(perdido) AS JP
+    FROM (
+        SELECT p.NombreEquipo1 AS NombreEquipo, ip.goleseq1 AS goleseq, ip.faltaseq1 AS faltaseq,
+        case when ip.goleseq1 = ip.goleseq2 then 1 else 0 end AS empate,
+        case when ip.goleseq1 > ip.goleseq2 then 1 else 0 end AS ganado,
+        case when ip.goleseq1 < ip.goleseq2 then 1 else 0 end AS perdido
+        FROM infopartidos ip
+        INNER JOIN partidos p ON p.NombrePartido = ip.NombrePartido
+        UNION ALL
+        SELECT p.NombreEquipo2 AS NombreEquipo, goleseq2 AS goleseq, ip.faltaseq2 AS faltaseq,
+        case when ip.goleseq1 = ip.goleseq2 then 1 else 0 end AS empate,
+        case when ip.goleseq1 < ip.goleseq2 then 1 else 0 end AS ganado,
+        case when ip.goleseq1 > ip.goleseq2 then 1 else 0 end AS perdido
+        FROM infopartidos ip
+        INNER JOIN partidos p ON p.NombrePartido = ip.NombrePartido
+        WHERE p.torneo_id = $id_torneo
+    ) AS Subquery
+    GROUP BY NombreEquipo order by PTS DESC;";
 
         $resultado = $this->conexion->query($query);
 

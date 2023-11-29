@@ -53,4 +53,28 @@ $(document).ready(function () {
             }
         });
     });
+
+    $.ajax({
+        url: 'clases/peticiones.php',
+        method: 'POST',
+        data: { accion:"consultarmensajes"},
+        dataType: 'json',
+        success: function (response) {
+            let html = "";
+            let mensajes = response.resultado
+            $.each(mensajes , function (index, value){
+                html +='<div><p>'+value.mensaje+'</p></div>';
+        });
+            $("#mensajes").append(html);
+            $('#mensajes').slick({
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2500,
+              }); 
+        },
+        error: function () {        
+            console.error('Error al cargar los datos.');
+        }
+    });
+
 });//ready

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/posicionesequipos.css">
+    <link rel="stylesheet" href="../css/jqx.base.css">    
+    <script type="text/javascript" src="../scripts/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="../scripts/sessiond.js"></script>
+    <script type="text/javascript" src="../scripts/sessiond.js"></script>
+    <script type="text/javascript" src="../scripts/posicionesequipos.js"></script>
+    <script type="text/javascript" src="../scripts/jqx-all.js"></script>
     <title>Consulta de Posiciones</title>
 </head>
 <body>
@@ -65,47 +71,14 @@
                 <p>El equipo 1 tiene un adeudo</p>
     <hr>
             </div>
-            <div class="sidebar-mensaje">
-                <p>Otro mensaje importante</p>
-            </div>
         </aside>
     </header>
     <div class="busqueda">
-        <label for="buscar-partido">Buscar Partido:</label>
-        <input type="text" id="buscar-partido" name="buscar-partido">
+        <label for="torneocombo">Buscar Torneo:</label>
+        <div id="torneocombo"></div>
         <button type="button" id="btn-buscar">Buscar</button>
     </div>
-    <main>
-        <table class="tabla-posiciones">
-            <thead>
-                <tr>
-                    <th>Equipo</th>
-                    <th>PT</th>
-                    <th>JG</th>
-                    <th>JE</th>
-                    <th>JP</th>
-                    <th>GF</th>
-                    <th>GC</th>
-                    <th>F</th>
-                    <th>DIF</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Equipo A</td>
-                    <td>24</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>20</td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>10</td>
-                </tr>
-                <!-- Agrega más filas con datos de equipos aquí -->
-            </tbody>
-        </table>
-    </main>
+    <div id="greed"></div>
 
     <footer>
         <!-- Contenido del footer aquí -->
