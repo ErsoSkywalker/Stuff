@@ -38,13 +38,12 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
             <li>
-                <a href="finanzas.html">Gestión de Información Financiera</a>
+                Gestión de Información Financiera
                 <ul>
                     <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -63,16 +62,9 @@
     </nav>
 </header>
 <body>   
- <aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
     <div class="container">
         <form id="bajaForm">
+            <p>Eliminar jugadores, da doble clic en el jugador, luego presiona el boton Eliminar jugador, asegurate que los datos son correctos</p>
             <label for="nombre">Nombre del Jugador:</label>
             <input type="text" id="nombre" name="nombre" required readonly>
             <input type="text" id="id_jugador" name="nombre" required readonly hidden>
@@ -81,7 +73,6 @@
         </form>
         <div id="grid_solicitudes"></div>
     </div>
-
 </body>
 <footer>
     <p>&copy; 2023 La Bombonera Fut 7 - Todos los derechos reservados</p>

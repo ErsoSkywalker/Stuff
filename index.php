@@ -39,7 +39,7 @@
                     <li><a href="contenido/consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
-            <li><a href="contenido/finanzas.html">Gestión de Información Financiera</a>
+            <li>Gestión de Información Financiera
                 <ul>
                     <li><a href="contenido/consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li><a href="contenido/modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -58,12 +58,15 @@
     </header>
     <body>
 <br><br><br><br>
+<br><br><br><br>
 <main>
        <a class="escondido" href="contenido/reportepartidos.html"><button id="generarReporte" class="boton-amarillo consulta">Generación del Reporte</button></a>
        <a href="contenido/consultademarcadores.html"><button id="consultarMarcadores" class="boton-amarillo">Consulta los Marcadores</button></a>
 <br>
         <a href="contenido/posicionesequipos.html"><center><button id="consultarPuntajes" class="boton-amarillo">Consulta los Puntajes</button></center></a>
-    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </main>
+
     <aside>
         <div id="iniciosession">
             <label for="usuario">Usuario</label>
@@ -71,6 +74,7 @@
             <label for="contraseña">Contraseña</label>
             <input type="password" id="contraseña" name="" class="inputiniciosession"/>
             <button id="iniciosessionbtn"> Iniciar sesion</button>
+            <a href="contenido/restablecercontrasena.html">¿Olvidaste tu contraseña?</a>
         </div>
         <div>
         <button id="cerrarsessionbtn"> Cerrar Sesion</button>
@@ -85,6 +89,7 @@
     <footer>
         <p>Contacto 2227098819</p>
         <p>¿Tienes alguna pregunta o necesitas más información? Contáctanos.</p>
+        <a href="contenido/faqs.html">Preguntas frecuentes</a>
         <p>dreamsaxx@gmail.com</p>
     </footer>
 </body>

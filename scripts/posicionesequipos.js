@@ -20,7 +20,7 @@ $(document).ready(function () {
     $(document).on('click', '#btn-buscar', function(event) {
         let id=$("#torneo").val();
         if(id !== "" && id != 0){
-            alert(id);
+            
             traertabla(id);
         }else{
             alert("Selecciona un torneo");

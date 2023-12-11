@@ -37,13 +37,12 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
             <li>
-                <a href="finanzas.html">Gestión de Información Financiera</a>
+                Gestión de Información Financiera
                 <ul>
                     <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -61,36 +60,26 @@
         </ul>
     </nav>
 </header>
-<body>   
- <aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
-    
-    
-
+<body>
+    <h3>Modificar adeudos</h3>
     <main>
         <form class="formulario">
+            <p>1. Selecciona un equipo que desees modificar:</p>
             <h2>Buscar Equipo</h2>
             <label for="nombreEquipo">Nombre del Equipo:</label>
-           <div id="equiposc"></div>
-            <button type="button" class="boton-amarillo" id="Buscar">Buscar</button>  
+            <div id="equiposc"></div>
+            <button type="button" class="boton-amarillo" id="Buscar">Buscar</button>
         </form>
-
         <form class="formulario">
+            <p>2. Modifica los nuevos campos del equipo seleccionado</p>
             <h2>Información del Equipo</h2>
-            <input type="text" id="textadeudo" name="" class="" readonly hidden/>
-            <input type="text" id="nombreEquipobase" name="" class="" readonly hidden/>
-            <input type="text" id="totalresultado" name="" class="" readonly hidden/>
+            <input type="text" id="textadeudo" name="" class="" readonly hidden />
+            <input type="text" id="nombreEquipobase" name="" class="" readonly hidden />
+            <input type="text" id="totalresultado" name="" class="" readonly hidden />
             <label id="Adeudos" for="adeudos">Adeudos:</label>
-	        <input id="pago" type="text" placeholder="Pago:"></input>
-
+            <input id="pago" type="text" placeholder="Pago:"></input>
             <button type="button" class="TOTAL" id="modificarEquipo">Modificar</button>
-	    <label id="total" for="total">Total:</label>
+            <label id="total" for="total">Total:</label>
         </form>
     </main>
 </body>

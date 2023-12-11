@@ -1,6 +1,6 @@
 .tabla-posiciones {
     margin: 20px auto;
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -20,8 +20,9 @@
     font-weight: bold;
 }
 .busqueda {
-    background-color: aliceblue;
+    background-color:white;
     margin: 20px 0;
+    padding:50px;
 }
 
 .busqueda label {
@@ -36,14 +37,14 @@
     border-radius: 5px;
 }
 
-.busqueda button {
-    background-color: #4285f4;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .busqueda button {
+        background-color: forestgreen;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 body {
     align-items: center;
         font-family: 'Verdana';
@@ -57,7 +58,7 @@ body {
         background-attachment: fixed;
         display: flex;
         flex-direction: column;	
-        width:78.5%;
+        width:100%;
     }
     
     header {
@@ -141,3 +142,13 @@ body {
     .sidebar-mensaje {
         margin-top: 10px;
     }
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #0074e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}

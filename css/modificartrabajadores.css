@@ -11,7 +11,7 @@ align-items: center;
     background-attachment: fixed;
     display: flex; /* Establece un contenedor flex para organizar el contenido */
     flex-direction: column; /* Alinea los elementos verticalmente */	
-    width:78.5%;
+    width:100%;
 }
 
 header {
@@ -153,4 +153,40 @@ select {
 
     .boton-amarillo:hover {
         background-color: #ff9800;
+    }
+footer {
+    margin-top: 400px;
+    background-color: #0074e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+    a:link {
+        color: white;
+    }
+
+    a:focus {
+        border-bottom: 1px solid;
+        background: #bae498;
+    }
+
+    a:hover {
+        border-bottom: 1px solid;
+        background: #419A00;
+    }
+
+    a:active {
+        background: #265301;
+        color: yellow;
+    }
+    #grid_solicitudes{
+        z-index: -1;
+        position: relative;
     }

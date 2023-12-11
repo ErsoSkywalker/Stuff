@@ -8,10 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const nombreTorneo = document.getElementById('nombreTorneo').value;
         const fechaInicio = document.getElementById('fechaInicio').value;
         const fechaFin = document.getElementById('fechaFin').value;
+        
 
         // Puedes realizar acciones con los datos, como enviarlos a un servidor o mostrarlos en una alerta
         const mensaje = `Nombre del Torneo: ${nombreTorneo}\nFecha de Inicio: ${fechaInicio}\nFecha de Fin: ${fechaFin}`;
         armar_html($("#cuantosequipos").val());
+        if (nombreTorneo === '' || fechaInicio === '' || fechaFin === '' || cuantosEquipos === '') {
+            alert('Por favor, complete todos los campos del formulario.');
+            return; // Evita continuar si hay campos vacíos
+        } else {
+        }
         // Limpia el formulario después de enviar
         $(this).hide();
         $("#finalizarBtn").show();
@@ -115,7 +121,7 @@ $(document).on('click', '#finalizarBtn', function(event) {
         method: "POST",
         data: { accion:"agregartorneo",equipos: equipos,fecini:fecini,fecter:fecter,nombre:nombre,cuantos:cuantos},
         success: function (response) {
-            
+            window.location.href = "../index.php";
         },
         error: function () {
             // Manejo de errores

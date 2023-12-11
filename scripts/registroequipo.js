@@ -21,6 +21,7 @@ $(document).ready(function () {
             error: function () {
                 // Manejo de errores
                 console.error("Error al realizar la inserción.");
+                window.alert("Error al realizar la inserción");
             }
         });
 

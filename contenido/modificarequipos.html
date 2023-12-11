@@ -6,8 +6,7 @@
     <title>Modificar Equipos</title>
     <link rel="stylesheet" href="../css/modificarequipos.css">
     <script type="text/javascript" src="../scripts/jquery-3.7.1.js"></script>
-<script type="text/javascript" src="../scripts/sessiond.js"></script>
-
+    <script type="text/javascript" src="../scripts/sessiond.js"></script>
     <script type="text/javascript" src="../scripts/jqx-all.js"></script>
     <script type="text/javascript" src="../scripts/modificarequipo.js"></script>
 </head>
@@ -37,7 +36,6 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
@@ -61,19 +59,10 @@
         </ul>
     </nav>
 </header>
-<body>   
- <aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
-    
-
+<body> 
     <main>
         <form class="formulario">
+            <p>1. Introduzca el nombre de un equipo y da clic en buscar</p>
             <h2>Buscar Equipo</h2>
             <label for="nombreEquipo">Nombre del Equipo:</label>
             <div id="nombreEquipoc"></div>
@@ -81,6 +70,7 @@
         </form>
 
         <form class="formulario">
+            <p>2. Introduzca los nuevos datos para el equipo</p>
             <h2>Información del Equipo</h2>
             <label for="nombreEquipo">Nombre del Equipo:</label>
             <input type="text" id="nombreEquipo" name="nombreEquipo">

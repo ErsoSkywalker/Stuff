@@ -3,15 +3,14 @@ align-items: center;
     font-family: 'Verdana';
     color: white;
     font-weight: bold;
-    margin: 0;
+    margin-right: -200px;
     padding: 0;
     background-image: url('../images/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex; /* Establece un contenedor flex para organizar el contenido */
-    flex-direction: column; /* Alinea los elementos verticalmente */	
-    width:78.5%;
+    display: flex; 
+    flex-direction: column;
+    width:80%;
 }
 
 header {
@@ -22,6 +21,8 @@ header {
     color: #fff;
     text-align: center;
     width: 100%;
+margin-right: 60px;
+margin-top:-10px;
 }
 
 header h1 {
@@ -46,11 +47,11 @@ nav ul {
     color: #fff;
     list-style: none;
     padding: 0;
-    display: flex; /* Cambio a flexbox para alinear el menú */
+    display: flex;
     padding: 10px 0;
-    justify-content: space-between; /* Distribuye los elementos en el espacio disponible */
-    position: relative; /* Añade posición relativa */
-    z-index: 2; /* Añade un índice z para estar encima del sidebar */
+    justify-content: space-between;
+    position: relative; 
+    z-index: 2;
 }
 
 nav ul li {
@@ -80,7 +81,7 @@ nav ul li ul li {
     width: 200px;
 }
 aside {
-
+margin-top:-10px;
     background-color: #f4f4f4;
     padding: 20px;
     border-left: 1px solid #ddd;
@@ -97,14 +98,15 @@ aside {
 }
 
 footer {
-    margin-top: 400px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     background-color: #0074e4;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
+    width: 77.7%;
 }
-
 .main {
     margin-top:100px;
     padding: 20px;
@@ -130,4 +132,7 @@ footer {
     background-color: #ff9800;
 }
 
-
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }

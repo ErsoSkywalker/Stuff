@@ -4,7 +4,7 @@ class funciones{
 
     public function __construct(){
         // Constructor: Establece la conexión a la base de datos
-        $this->conexion = new mysqli("localhost", "rafa", "", "torneosfut");
+        $this->conexion = new mysqli("localhost", "root", "", "TorneosFut");
         if ($this->conexion->connect_error) {
             die("Error de conexión: " . $this->conexion->connect_error);
         }
@@ -146,7 +146,10 @@ class funciones{
         if ($res) {
             return "Datos ingresados con exito.";
         } else {
-            return "Error al ingresar los datos: " . $query->error;
+            header("Location: index.html?error=" . urlencode("Error al ingresar los datos: " . $query->error));
+        exit();
+
+            
         }
     }
 
@@ -175,6 +178,7 @@ class funciones{
             return "Equipo actualizado con exito.";
         } else {
             return "Error al actualizar los datos: " . $query->error;
+            
         }
     }
     public function AgregarTrabajador($nombre, $puesto, $telefono, $correo){
@@ -301,6 +305,9 @@ class funciones{
                     $querypartidos = $this->conexion->prepare("INSERT INTO partidos(torneo_id,NombrePartido,NombreTorneo,NombreEquipo1,NombreEquipo2)
                     VALUES('$id','$nompart','$nombre','$eqa','$eqb');");
                     $querypartidos->execute();
+                    $queryAdeudo = $this->conexion->prepare("UPDATE equipo SET Adeudos = Adeudos + 400 WHERE Nombre_equipo = '$value';");
+                    $queryAdeudo->execute();
+
                 }
             }
             if ($resequipos && $querypartidos) {

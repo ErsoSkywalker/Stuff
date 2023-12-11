@@ -9,20 +9,19 @@ align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex; /* Establece un contenedor flex para organizar el contenido */
-    flex-direction: column; /* Alinea los elementos verticalmente */	
-    width:78.5%;
+    display: flex;
+    flex-direction: column;
+    width:100%;
 }
+
 
 header {
     background-color: #0074e4;
     font-family: 'Comic Sans MS';
     font-weight: bold;
     font-size: 20px;
-    color: #fff;
     text-align: center;
     width: 100%;
-    color:white;
 }
 
 header h1 {
@@ -82,25 +81,13 @@ nav ul li:hover ul {
 nav ul li ul li {
     width: 200px;
 }
-aside {
-
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-left: 1px solid #ddd;
-    width: 250px;
-    height: 100% ; 
-    color: rgb(225, 49, 49);
-    right:0;
-    z-index: -1;
- position: fixed;
-}
-
-.sidebar-mensaje {
-    margin-top: 10px;
+ margin-top: 10px;
 }
 
 footer {
-    margin-top: 400px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     background-color: #0074e4;
     color: #fff;
     text-align: center;
@@ -205,4 +192,8 @@ a {
     #grid_solicitudes{
         z-index: -1;
         position: relative;
+    }
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
     }

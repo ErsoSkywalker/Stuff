@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../css/bajaequipos.css">
     <link rel="stylesheet" href="../css/jqx.base.css">
     <script type="text/javascript" src="../scripts/jquery-3.7.1.js"></script>
-<script type="text/javascript" src="../scripts/sessiond.js"></script>
-
+    <script type="text/javascript" src="../scripts/sessiond.js"></script>
     <script type="text/javascript" src="../scripts/bajaequipos.js"></script>
     <script type="text/javascript" src="../scripts/jqx-all.js"></script>
 </head>
@@ -38,13 +37,12 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
             <li>
-                <a href="finanzas.html">Gestión de Información Financiera</a>
+                Gestión de Información Financiera
                 <ul>
                     <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -63,16 +61,10 @@
     </nav>
 </header>
 <body>   
- <aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
     <div class="container">
+        
         <form id="bajaEquipoForm">
+            <p>Elimina un equipo dando doble clic en uno y da clic en Eliminar equipo, asegurate de que sea el correcto</p>
             <label for="nombreEquipo">Nombre del Equipo:</label>
             <input type="text" id="nombreEquipo" name="nombreEquipo" required readonly>
             <br>

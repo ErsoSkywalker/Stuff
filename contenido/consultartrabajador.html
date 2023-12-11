@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultartrabajador.css">
+    <link rel="stylesheet" href="../css/modificartrabajadores.css">
     <link rel="stylesheet" href="../css/jqx.base.css">
     <script type="text/javascript" src="../scripts/jquery-3.7.1.js"></script>
 <script type="text/javascript" src="../scripts/sessiond.js"></script>
 
-    <script type="text/javascript" src="../scripts/consultartrabajador.js"></script>
+    <script type="text/javascript" src="../scripts/modificartrabajador.js"></script>
     <script type="text/javascript" src="../scripts/jqx-all.js"></script>
     <title>Consulta de trabajadores</title>
 </head>
@@ -38,13 +38,12 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
             <li>
-                <a href="finanzas.html">Gestión de Información Financiera</a>
+                Gestion de la informacion financiera 
                 <ul>
                     <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -64,22 +63,31 @@
 </header>
 
 <body>
-	<aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
+    <h3>Consulta el trabajador</h3>
+    <form class="formulario">
+        <h2>Buscar Trabajador</h2>
+        <label for="nombreEquipo">Nombre del Trabajador:</label>
+        <div id="nombreTrabajadorc"></div>
+        <button type="button" class="boton-amarillo" id="Buscar">Buscar</button>
+    </form>
 
+    <form class="formulario">
+        <h2>Información del Trabajador</h2>
+        <input type="text" id="id" name="id" required hidden>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required readonly>
 
-    <main>
-        <div id="grid_solicitudes"></div>
-    </main>
+        <label for="telefono">Teléfono de Contacto:</label>
+        <input type="tel" id="telefono" name="telefono" required readonly>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required readonly>
+
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" name="puesto" required readonly>
+    </form>
 
     <footer>
-        <!-- Contenido del footer aquí -->
     </footer>
 </body>
 </html>

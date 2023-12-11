@@ -57,12 +57,23 @@ $(document).ready(function () {
         });
     });
 });
-$(document).on('keyup', '#pago', function(event) {
+$(document).on('keyup', '#pago', function (event) {
     $("#total").text("Total:");
     $("#totalresultado").val($("#textadeudo").val());
-    if(($("#textadeudo").val() !== null || $("#textadeudo").val() !== "") && ($("#pago").val() !== null || $("#pago").val() !== "")){
-        var resultado = ($("#textadeudo").val()-$("#pago").val());
+    var deudo = parseFloat($("#textadeudo").val()) || 0;
+    var pago = parseFloat($("#pago").val()) || 0;
+    if (deudo >= 0 && pago >= 0) {
+        var resultado = deudo - pago;
         $("#total").append(resultado);
-        $("#totalresultado").val(resultado);
+        $("#totalresultado").val(resultado); 
+        $("#modificarEquipo").prop("disabled", false);
+    } else {
+        // Mostrar un mensaje de error o realizar alguna acción en caso de pagos negativos
+        // Por ejemplo, puedes mostrar un mensaje de error en algún elemento HTML
+        $("#total").append("Error: Los pagos no pueden ser negativos");
+        $("#modificarEquipo").prop("disabled", true);
+
+        // También podrías desactivar el botón de pago o realizar alguna otra acción
+        // para indicar al usuario que ha ingresado un valor inválido.
     }
 });

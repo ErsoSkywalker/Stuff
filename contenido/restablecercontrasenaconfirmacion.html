@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <link rel="stylesheet" href="../css/rc.css">
+</head>
+
+<header>
+    <a href="../index.php"><h1><img src="../images/logo.png" width=60px height=60px>LA BOMBONERA<img src="../images/logo.png" width=60px height=60px></h1></a>
+    <nav>
+        <ul>
+            <li>
+                <a href="contenido/equipos.html">Gestión de Equipos</a>
+                <ul>
+                    <li class="escondido"><a href="contenido/registrarequipos.html">Alta</a></li>
+                    <li class="escondido"><a href="contenido/eliminarequipos.html">Baja</a></li>
+                    <li class="escondido"><a href="contenido/modificarequipos.html">Modificación</a></li>
+                    <li><a href="consultarequipos.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contenido/jugadores.html">Gestión de Jugadores</a>
+                <ul>
+                    <li class="escondido"><a href="contenido/registrarjugadores.html">Alta</a></li>
+                    <li class="escondido"><a href="contenido/eliminarjugadores.html">Baja</a></li>
+                    <li class="escondido"><a href="contenido/modificarjugadores.html">Modificación</a></li>
+                    <li><a href="contenido/consultarjugadores.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contenido/torneos.html">Gestión de Torneos</a>
+                <ul>
+                    <li class="escondido"><a href="contenido/registrartorneo.html">Alta</a></li>
+                    <li class="escondido"><a href="contenido/modificartorneo.html">Modificación</a></li>
+                    <li><a href="contenido/consultartorneo.html">Consulta</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contenido/finanzas.html">Gestión de Información Financiera</a>
+                <ul>
+                    <li><a href="contenido/consultaradeudo.html">Consulta de Adeudos</a></li>
+                    <li><a href="contenido/modificaradeudo.html">Modificación de Adeudos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contenido/trabajador.html">Gestión de Trabajadores</a>
+                <ul>
+                    <li class="escondido"><a href="contenido/registrartrabajador.html">Alta</a></li>
+                    <li class="escondido"><a href="contenido/eliminartrabajador.html">Baja</a></li>
+                    <li class="escondido"><a href="contenido/modificartrabajador.html">Modificación.</a></li>
+                    <li><a href="contenido/consultartrabajador.html">Consulta</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div>
+        <h2>Restablecer Contraseña</h2>
+
+        <form action="../clases/ac.php" method="post">
+            <center>
+                <label for="email">Correo Electr�nico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="hidden" name="token" value="<?php echo $_GET['token']; ?>">
+
+                <label for="password">Nueva Contraseña:</label>
+                <input type="password" name="password" required>
+
+                <label for="confirm_password">Confirmar Contraseña:</label>
+                <input type="password" name="confirm_password" required>
+                <br><br><br><br>
+                <button type="submit">Restablecer Contraseña</button>
+
+
+            </center>
+            
+        </form>
+    </div>
+
+    <aside>
+        <div id="iniciosession">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="" class="inputiniciosession" />
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="" class="inputiniciosession" />
+            <button id="iniciosessionbtn"> Iniciar sesion</button>
+        </div>
+        <div>
+            <button id="cerrarsessionbtn"> Cerrar Sesion</button>
+        </div>
+        <center><img src="../images/logo.png" width=100% height=200px></center>
+        <div class="sidebar-mensaje">
+            <div id="mensajes"></div>
+            <hr>
+        </div>
+
+    </aside>
+</body>
+<footer>
+    <p>Contacto 2227098819</p>
+    <p>¿Tienes alguna pregunta o necesitas más información? Contáctanos.</p>
+    <p>dreamsaxx@gmail.com</p>
+</footer>
+
+
+</html>

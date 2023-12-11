@@ -9,7 +9,7 @@
 <script type="text/javascript" src="../scripts/sessiond.js"></script>
 
     <script type="text/javascript" src="../scripts/jqx-all.js"></script>    
-    <script type="text/javascript" src="../scripts/modificarjugador.js"></script>
+    <script type="text/javascript" src="../scripts/registrojugador.js"></script>
 </head>
 <header>
     <a href="../index.php"><h1><img src="../images/logo.png" width=60px height=60px>LA BOMBONERA<img src="../images/logo.png" width=60px height=60px></h1></a>
@@ -37,13 +37,12 @@
                 <a href="torneos.html">Gestión de Torneos</a>
                 <ul>
                     <li class="escondido"><a href="registrartorneo.html">Alta</a></li>
-                    <li class="escondido"><a href="eliminartorneo.html">Baja</a></li>
                     <li class="escondido"><a href="modificartorneo.html">Modificación</a></li>
                     <li><a href="consultartorneo.html">Consulta</a></li>
                 </ul>
             </li>
             <li>
-                <a href="finanzas.html">Gestión de Información Financiera</a>
+                Gestión de Información Financiera
                 <ul>
                     <li><a href="consultaradeudo.html">Consulta de Adeudos</a></li>
                     <li class="escondido"><a href="modificaradeudo.html">Modificación de Adeudos</a></li>
@@ -62,17 +61,9 @@
     </nav>
 </header>
 <body>   
- <aside>
-        <center><img src="../images/logo.png" width=100% height=200px></center>
-        <div class="sidebar-mensaje">
-            <p>El equipo 1 tiene un adeudo</p>
-<hr>
-        </div>
-        
-    </aside>
     
     <div class="container">
-        <h1>Registro de Jugadores</h1>
+        <p>Registre un nuevo jugador</p>
         <form id="jugadorForm">
             <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" required>

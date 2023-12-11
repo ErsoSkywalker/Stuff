@@ -1,19 +1,20 @@
 body {
-align-items: center;
     font-family: 'Verdana';
     color: black;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
     background-image: url('../images/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex; /* Establece un contenedor flex para organizar el contenido */
-    flex-direction: column; /* Alinea los elementos verticalmente */	
-    width:78.5%;
+    display: flex; 
+    flex-direction: column; 
+    width:100%;
 }
-
+h3{
+background-color: forestgreen;
+    font-family: 'Comic Sans MS';
+color:white;
+}
 header {
     background-color: #0074e4;
     font-family: 'Comic Sans MS';
@@ -21,13 +22,19 @@ header {
     font-size: 20px;
     color: #fff;
     text-align: center;
-    width: 100%;
+width:100%;
+}
+h3{
+background-color: forestgreen;
+    font-family: 'Comic Sans MS';
+color:white;
+
 }
 
 header h1 {
     font-size: 70px;
     margin: 0;
-background-color: #0074e4;
+    background-color: #0074e4;
     font-family: 'Comic Sans MS';
 }
 
@@ -79,22 +86,6 @@ nav ul li:hover ul {
 nav ul li ul li {
     width: 200px;
 }
-aside {
-
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-left: 1px solid #ddd;
-    width: 250px;
-    height: 100% ; 
-    color: rgb(225, 49, 49);
-    right:0;
-    z-index: -1;
- position: fixed;
-}
-
-.sidebar-mensaje {
-    margin-top: 10px;
-}
 
 footer {
     margin-top: 400px;
@@ -128,7 +119,6 @@ footer {
     color: #333;
 }
 
-/* Estilos para cada sección */
 .alta {
     border-top: 5px solid #4CAF50;
 }
@@ -144,3 +134,31 @@ footer {
 .consulta {
     border-top: 5px solid #FFC107;
 }
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+    a:link {
+        color: white;
+    }
+
+    a:focus {
+        border-bottom: 1px solid;
+        background: #bae498;
+    }
+
+    a:hover {
+        border-bottom: 1px solid;
+        background: #419A00;
+    }
+
+    a:active {
+        background: #265301;
+        color: yellow;
+    }
+    #grid_solicitudes{
+        z-index: -1;
+        position: relative;
+    }

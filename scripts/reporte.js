@@ -93,7 +93,7 @@ $(document).ready(function () {
                 error: function () {
                     // Manejo de errores
                     console.error("Error al realizar la inserción.");
-                }
+                }{
             });
         });
     });
